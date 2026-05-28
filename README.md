@@ -1,25 +1,24 @@
-# Indovina il Radionuclide — Web clean
+# Indovina il Radionuclide — Web prototype
 
-Versione web pulita del prototipo, senza Android, Capacitor, Gradle o Vitest.
+Clean web-only React/Vite prototype.
 
-## Comandi
+## Run locally
 
 ```bash
-npm install
+npm install --no-audit --no-fund --legacy-peer-deps
 npm run dev
+```
+
+## Build
+
+```bash
 npm run build
 ```
 
-La build web viene generata nella cartella `dist/`.
+## GitHub Pages
 
-## Pubblicazione GitHub Pages
+The project includes `vite.config.js` with `base: './'`, so generated JS/CSS assets use relative paths and work correctly on GitHub Pages project URLs such as:
 
-Il workflow `.github/workflows/deploy-pages.yml` compila automaticamente la web app e la pubblica su GitHub Pages quando fai push su `main`.
+`https://USERNAME.github.io/REPOSITORY/`
 
-Nel repository GitHub vai in:
-
-`Settings → Pages → Build and deployment → Source: GitHub Actions`
-
-## Nota scientifica
-
-Il database contiene carte originali e carte candidate. Prima della pubblicazione pubblica definitiva, i dati e le storie devono essere validati fonte per fonte.
+Enable Pages from **Settings → Pages → Source: GitHub Actions**, or let the workflow enable it automatically.
